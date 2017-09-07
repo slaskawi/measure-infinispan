@@ -30,8 +30,8 @@ jmh {
     iterations = 10
     fork = 1
 //    timeUnit = 's'
-    // timeOnIteration = '5s'
-    forceGC = true // Should JMH force GC between iterations?
+    // timeOnIteration = '7s'
+    // forceGC = true // Should JMH force GC between iterations?
 }
 
 repositories {
