@@ -42,6 +42,7 @@ allprojects {
     dependencies {
         testCompile 'junit:junit:4.12'
         testCompile 'org.infinispan:infinispan-client-hotrod:9.0.0.Final'
+        testCompile 'io.rest-assured:rest-assured:3.0.3'
     }
 
     test {

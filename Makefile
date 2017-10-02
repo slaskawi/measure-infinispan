@@ -1,5 +1,5 @@
 XMX=512M
-JAVA_OPTS="-Xmx$(XMX) -XX:+AlwaysPreTouch -XX:+UnlockExperimentalVMOptions -XX:NativeMemoryTracking=summary -Djava.net.preferIPv4Stack=true -XX:+DisableExplicitGC"
+JAVA_OPTS="-Xmx$(XMX) -Xms$(XMX) -XX:+AlwaysPreTouch -XX:+UnlockExperimentalVMOptions -XX:NativeMemoryTracking=summary -Djava.net.preferIPv4Stack=true -XX:+DisableExplicitGC"
 DOCKER_MEMORY=1024M
 INFINISPAN_PARAMETERS=-c clustered.xml -Djboss.default.jgroups.stack=tcp
 
