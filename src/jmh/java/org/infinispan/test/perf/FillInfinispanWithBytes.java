@@ -25,8 +25,8 @@ public class FillInfinispanWithBytes {
         while(true) {
             Map<Object, Object> batch = new HashMap<>();
             for (int i = 0; i < BATCH; ++i) {
-                byte[] key = new byte[512];
-                byte[] val = new byte[512];
+                byte[] key = new byte[36];
+                byte[] val = new byte[36];
                 random.nextBytes(key);
                 random.nextBytes(val);
                 totalSize += key.length + val.length;
