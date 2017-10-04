@@ -34,6 +34,10 @@ public class FillInfinispanWithStringsAndREST {
                 while (true) {
                     String key = UUID.randomUUID().toString();
                     String val = UUID.randomUUID().toString();
+                    while(key.length() < 1024 * 10) {
+                        key += "a";
+                        val += "a";
+                    }
                     totalSize.addAndGet((key.getBytes().length + val.getBytes().length));
                     try {
                         URL url = new URL(String.format("http://%s:8080/rest/default/%s", INFINISPAN_ADDRESS, key));

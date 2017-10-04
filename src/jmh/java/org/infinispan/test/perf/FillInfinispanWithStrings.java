@@ -26,6 +26,10 @@ public class FillInfinispanWithStrings {
             for (int i = 0; i < BATCH; ++i) {
                 String key = UUID.randomUUID().toString();
                 String val = UUID.randomUUID().toString();
+                while(key.length() < 1024 * 10) {
+                    key += "a";
+                    val += "a";
+                }
                 totalSize += (key.getBytes().length + val.getBytes().length);
                 batch.put(key, val);
             }
