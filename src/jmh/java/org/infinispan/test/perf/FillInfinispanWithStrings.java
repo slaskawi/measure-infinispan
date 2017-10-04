@@ -26,7 +26,7 @@ public class FillInfinispanWithStrings {
             for (int i = 0; i < BATCH; ++i) {
                 String key = UUID.randomUUID().toString();
                 String val = UUID.randomUUID().toString();
-                totalSize += (key.length() + val.length()) * 2;
+                totalSize += (key.getBytes().length + val.getBytes().length);
                 batch.put(key, val);
             }
             remoteCache.putAll(batch);
